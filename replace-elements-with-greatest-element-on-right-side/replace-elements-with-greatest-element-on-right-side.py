@@ -7,5 +7,4 @@ class Solution:
             arr[i] =ge
             if curr> ge:
                 ge = curr
-
         return arr
