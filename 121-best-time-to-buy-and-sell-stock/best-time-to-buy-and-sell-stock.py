@@ -1,14 +1,9 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        temp =[]
-        maxi = -1 
-        revLsit = prices[::-1]
-        for i in range(len(prices)):
-            maxi = max(maxi,revLsit[i]) 
-            temp.append(maxi)
-        greatestValAfterMe = temp[::-1]
-        print(greatestValAfterMe)
+        n = len(prices)
         ans = 0 
-        for i in range(len(prices)):
-            ans = max(ans, greatestValAfterMe[i] - prices[i])
+        maxi = -1
+        for i in range(n-1,-1,-1):
+            maxi = max(maxi, prices[i])
+            ans = max(ans,maxi - prices[i] )
         return ans
