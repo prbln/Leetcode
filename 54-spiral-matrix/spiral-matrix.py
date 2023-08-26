@@ -8,23 +8,23 @@ class Solution:
         while(minRow<=maxRow and minCol<=maxCol):
             col = minCol 
             
-            while(col<=maxCol and minRow<=maxRow and minCol<=maxCol):
+            while(col<=maxCol ):
                 ans.append(matrix[minRow][col])
                 col+=1
             minRow+=1
             row= minRow
-            while(row<=maxRow and minRow<=maxRow and minCol<=maxCol):
+            while(row<=maxRow ):
                 ans.append(matrix[row][maxCol])
                 row+=1
             maxCol-=1
             col = maxCol
             # print(col,minCol)
-            while(col>=minCol and minRow<=maxRow and minCol<=maxCol):
+            while(col>=minCol and minRow<=maxRow ):
                 ans.append(matrix[maxRow][col])
                 col-=1
             maxRow -=1
             row = maxRow
-            while(row>=minRow and minRow<=maxRow and minCol<=maxCol):
+            while(row>=minRow and minCol<=maxCol):
                 ans.append(matrix[row][minCol])
                 row-=1
             minCol+=1 
