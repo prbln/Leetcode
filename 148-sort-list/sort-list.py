@@ -49,11 +49,6 @@ class Solution:
             prev.next = None
             left =  mergeSort(head) 
             right = mergeSort(slow) 
-            
-            
-            # print(right.val, left.val)
-            x = mergeTwoSortedArray(left, right)
-            # print(x.val)
-            return x
+            return mergeTwoSortedArray(left, right)
         return mergeSort(head)
             
