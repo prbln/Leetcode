@@ -11,7 +11,6 @@ class Solution:
             return nums[n-1]
         while(l<=h):
             mid = (l+h)//2
-            print(nums[l], nums[h], mid)
             if nums[mid] == nums[mid+1]:
                 if mid %2 ==0:
                     l = mid+1
