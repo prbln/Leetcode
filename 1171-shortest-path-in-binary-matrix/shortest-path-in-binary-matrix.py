@@ -3,8 +3,7 @@ from collections import deque
 class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
         longestPath = -1
-        n = len(grid)
-        m = len(grid[0])
+        n,m = len(grid), len(grid[0])
         if grid[0][0] ==1:
             return -1
         q = deque() 
